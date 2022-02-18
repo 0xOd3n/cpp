@@ -5,14 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 21:52:37 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/18 01:39:29 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/02/18 22:35:54 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/02/18 22:48:42 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
-class phonebook
+class Phonebook
 {
-	contact contacts;		
+	private :
+	public :
+		Contact Contacts[8];
+		void	Add();
 };
