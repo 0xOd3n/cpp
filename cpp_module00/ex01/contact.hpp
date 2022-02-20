@@ -6,11 +6,12 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:33:38 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/19 20:01:22 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/02/21 00:24:13 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 
 class Contact
 {
@@ -25,7 +26,7 @@ class Contact
 		~Contact();
 		void	Add();
 		void	Display();
-		void	Search(int i);
-		void	get_line(std::string& input);
+		void	Search(int idx);
+		void	get_line(std::string& input, std::string msg);
 		std::string Check_num(std::string phone);
 };

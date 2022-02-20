@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:46:29 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/19 20:02:14 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/02/21 00:49:42 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ std::string	Contact::Check_num(std::string phone)
 	return (phone);
 }
 
-void	Contact::get_line(std::string& input)
+void	Contact::get_line(std::string& input, std::string msg)
 {
+	std::cout << msg;
 	while (1)
 	{
 		if (!getline(std::cin, input))
@@ -49,6 +50,7 @@ void	Contact::get_line(std::string& input)
 		if (input.empty())
 		{
 			std::cout << "Empty field try again" << std::endl;
+			std::cout << msg;
 			continue;
 		}
 		else
@@ -58,22 +60,18 @@ void	Contact::get_line(std::string& input)
 
 void	Contact::Add()
 {
-	std::cout << "Enter first name :";
-	get_line(this->fname);
-	std::cout << "Enter last name :";
-	get_line(this->lname);
-	std::cout << "Enter phone number :";
-	get_line(this->phone);
+	get_line(this->fname, "Enter first name :");
+	get_line(this->lname, "Enter last name :");
+	get_line(this->phone, "Enter phone number :");
 	this->phone = Check_num(this->phone);
-	std::cout << "Enter nickname :";
-	get_line(this->nickname);
-	std::cout << "Enter darksecret :";
-	get_line(this->dsecret);
+	get_line(this->nickname, "Enter nickname :");
+	get_line(this->dsecret, "Enter darksecret :");
 }
 
-void	Contact::Search(int i)
+void	Contact::Search(int idx)
 {
-		
+	std::cout << "|" << std::setw(10) << idx << "|\n";
+	std::
 }
 
 void	Contact::Display()
