@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:35:54 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/21 00:09:25 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:25:56 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ class Phonebook
 		void	Add();
 		void	Display(int idx);
 		void	Search();
+		int		get_index();
 };

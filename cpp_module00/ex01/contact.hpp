@@ -6,12 +6,19 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:33:38 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/21 00:24:13 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/02/21 23:00:40 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
+
+#define RED "\e[91m"
+#define BLU "\e[34m"
+#define GRN "\e[92m"
+#define MAG "\e[95m"
+#define WIT "\e[0m"
+#define CYN "\e[96m"
 
 class Contact
 {

@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:39:00 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/21 00:28:36 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/02/22 03:03:57 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ int main()
 {
 	Phonebook phonebook;
 	std::string input;
+	int counter = 0;
 	
 	while (1)
 	{
-		std::cout << "Enter a command" << std::endl;
+		std::cout << GRN << "Enter a command\n" << WIT << std::endl;
 		if (!getline(std::cin, input))
 			exit (0);
 		if (input == "ADD")
@@ -32,10 +33,12 @@ int main()
 		else if (input == "EXIT")
 			exit (0);
 		else
-			std::cout << "CMD not found" << std::endl;
-		// phonebook.Display(i);
-		// std::cin >> input >> age;
-		// std::cout << input << std::endl;
+		{
+			std::cout << RED << "\nCommand not found\n" << WIT << std::endl;
+			while (++counter < 1000000000);
+			counter = 0;
+			std::system("clear");
+		}
 	}
 }
 
