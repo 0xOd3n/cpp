@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 04:45:14 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/22 04:52:26 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/02/22 16:03:44 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int main()
 {
+	Zombie *z_ptr;
 	Zombie Zombie1("Ryoma");
-	Zombie Zombie2("Rambos");
+	z_ptr = newZombie("Zombos");
 	Zombie1.announce();
-	Zombie2.announce();
+	z_ptr->announce();
+	randomChump("ZAX");
+	delete z_ptr;
 }
