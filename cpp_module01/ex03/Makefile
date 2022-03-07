@@ -6,19 +6,20 @@
 #    By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 16:04:40 by abbelhac          #+#    #+#              #
-#    Updated: 2022/03/07 22:50:40 by abbelhac         ###   ########.fr        #
+#    Updated: 2022/03/07 22:09:48 by abbelhac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = Human
 
-SRCS = Zombie.cpp \
-		ZombieHorde.cpp\
+SRCS =	Weapon.cpp \
+		HumanA.cpp\
+		HumanB.cpp\
 		main.cpp
 OBJ = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror
 STD = -std=c++98
-HEADER = Zombie.hpp
+HEADER = Weapon.hpp HumanA.hpp HumanB.hpp 
 
 all : $(NAME)
 

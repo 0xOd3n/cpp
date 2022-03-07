@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 04:15:47 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/07 20:28:33 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/03/07 17:55:59 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/03/07 22:38:07 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
-#define RED "\e[91m"
-#define BLU "\e[34m"
-#define GRN "\e[92m"
-#define MAG "\e[95m"
-#define WIT "\e[0m"
-#define CYN "\e[96m"
-
+# ifndef WEAPON_HPP
+#define WEAPON_HPP
 #include <iostream>
 
-class Zombie
+
+class Weapon
 {
 	private:
-	
-			std::string name;
+				std::string	type;
 	public:
-			Zombie();
-			~Zombie();
-			Zombie(std::string name);
-
-			void	announce(void);
-			void	set_name(std::string name);
+				Weapon();
+				Weapon(const std::string weapon_type);
+				~Weapon();
+				const std::string&		getType();
+				void	setType(std::string str);
 };
 
-Zombie* zombieHorde(int N, std::string name);
-
-#endif
+# endif

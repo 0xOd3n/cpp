@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 04:15:47 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/07 20:28:33 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/03/07 19:20:28 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/03/07 22:47:22 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# ifndef HUMANB_HPP
+# define HUMANB_HPP
+# include "Weapon.hpp"
 
-#define RED "\e[91m"
-#define BLU "\e[34m"
-#define GRN "\e[92m"
-#define MAG "\e[95m"
-#define WIT "\e[0m"
-#define CYN "\e[96m"
-
-#include <iostream>
-
-class Zombie
+class HumanB
 {
 	private:
-	
-			std::string name;
+				Weapon	weapon_B;
+				std::string name;
 	public:
-			Zombie();
-			~Zombie();
-			Zombie(std::string name);
-
-			void	announce(void);
-			void	set_name(std::string name);
+				HumanB();
+				~HumanB();
+				HumanB(std::string Name);
+				void	setWeapon(Weapon New_weapon);
+				void	attack();
 };
 
-Zombie* zombieHorde(int N, std::string name);
-
-#endif
+# endif
