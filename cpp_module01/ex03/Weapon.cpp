@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:55:21 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/07 22:39:46 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/03/08 17:41:42 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Weapon::~Weapon()
 	
 }
 
-Weapon::Weapon(const std::string weapon_type)
+Weapon::Weapon(const std::string& weapon_type)
 {
 	type = weapon_type;
 }
