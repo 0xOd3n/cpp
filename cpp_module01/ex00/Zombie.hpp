@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 04:15:47 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/22 16:00:20 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/03/12 19:11:37 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Zombie
 			Zombie();
 			~Zombie();
 			Zombie(std::string name);
-			
 			void	announce(void);
 };
 

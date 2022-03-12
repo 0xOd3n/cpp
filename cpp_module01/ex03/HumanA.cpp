@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 20:17:30 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/08 18:07:28 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/03/12 20:11:28 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 HumanA::~HumanA()
 {
-	
+
 }
 HumanA::HumanA(std::string NameA, Weapon& WeaponA) : Weapon_A(WeaponA)
 {

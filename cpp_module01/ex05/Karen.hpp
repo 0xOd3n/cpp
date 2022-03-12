@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 04:45:14 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/12 19:34:58 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/03/10 15:56:06 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/03/10 20:07:59 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp" 
+#include <iostream>
 
-int main()
+# ifndef KAREN_HPP
+# define KAREM_HPP
+
+class Karen
 {
-	int i = 0;
-	int N = 5;
-	Zombie *z_ptr;
-	z_ptr = zombieHorde(N, "Zombos");
+	private :
+				void	debug( void );
+				void	info( void );
+				void	warning( void );
+				void	error( void );
+	public :
+				void	(Karen::*ptr[4])();
+				void complain( std::string level );
+				
+};
 
-	while (z_ptr && i < N)
-	{
-		z_ptr[i++].announce();
-	}	
-	delete[] z_ptr;
-}
+# endif

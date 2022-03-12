@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 16:21:54 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/02/22 21:59:17 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/03/12 19:26:25 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie* zombieHorde(int N, std::string name)
 	std::string tmp;
 	int i = 0;
 	Zombie *ptr;
-	if (name.empty())
+	if (name.empty() || N <= 0 )
 		return (nullptr);
 	ptr = new Zombie[N];
 
