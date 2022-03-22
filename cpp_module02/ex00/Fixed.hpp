@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:29:10 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/21 21:39:03 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/03/22 21:48:31 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Fixed
 	public :
 				Fixed();
 				Fixed(const Fixed& copy);
+				Fixed& operator=(const Fixed& val);
 				~Fixed();
-				 
-	
 };
