@@ -26,7 +26,7 @@ Fixed::Fixed(const Fixed& copy)
 
 Fixed& Fixed::operator=(const Fixed& val)
 {
-	std::cout << "Copy assignment operator calle\n";
+	std::cout << "Copy assignment operator called\n";
 	this->fp_value = val.fp_value; 
 	return (*this);
 }
@@ -36,3 +36,14 @@ Fixed::~Fixed()
 	std::cout << "Destructor called\n";
 }
 
+int Fixed::getRawBits( void ) const
+{
+	std::cout << "getRawBits member function called\n";
+	return(this->fp_value);
+}
+
+void Fixed::setRawBits( int const raw )
+{
+	std::cout << "setRawBits member function called\n";
+	this->fp_value = raw;
+}
