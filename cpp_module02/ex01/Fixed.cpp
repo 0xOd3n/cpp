@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:29:07 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/03/24 22:51:42 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/03/25 20:41:00 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,20 @@ int Fixed::getRawBits( void ) const
 {
 	std::cout << "getRawBits member function called\n";
 	return(this->fp_value);
+}
+
+float	Fixed::toFloat(void) const
+{
+	return ( float(fp_value) / (1 << frac_bit_val) );
+}
+
+int		Fixed::toInt(void) const
+{
+	return (fp_value >> frac_bit_val );
+}
+
+std::ostream&	Fixed::operator<<(std::ostream &o, const Fixed &fixed)
+{
+	o << fixed.toFloat();
+	return (o);
 }
