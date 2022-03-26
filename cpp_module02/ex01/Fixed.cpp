@@ -15,7 +15,7 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called\n";
-	this->fp_value = 0;	
+	this->fp_value = 0;
 }
 
 Fixed::Fixed(const Fixed& copy)
@@ -31,7 +31,7 @@ Fixed::Fixed(const int value)
 
 Fixed::Fixed(const float value)
 {
-	this->fp_value = value * (1 << frac_bit_val);
+	this->fp_value = roundf(value * (1 << frac_bit_val));
 }
 
 Fixed::~Fixed()
@@ -68,7 +68,13 @@ int		Fixed::toInt(void) const
 	return (fp_value >> frac_bit_val );
 }
 
-std::ostream&	Fixed::operator<<(std::ostream &o, const Fixed &fixed)
+// std::ostream &operator<<(std::ostream &output, Fixed const &fixed)
+// {
+// 	output << fixed.toFloat();
+// 	return(output);
+// }
+
+std::ostream&	operator<<(std::ostream &o, const Fixed &fixed)
 {
 	o << fixed.toFloat();
 	return (o);

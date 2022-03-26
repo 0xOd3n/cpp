@@ -27,12 +27,14 @@ class Fixed
 				Fixed(const float value);
 				Fixed( const Fixed& copy );
 				Fixed& operator=( const Fixed& val );
-				std::ostream&	operator<<(std::ostream &o, const Fixed &fixed);
+				//std::ostream& operator<<(std::ostream &o, const Fixed& fixed);
 				~Fixed();
 				float	toFloat(void) const;
 				int		toInt(void) const;
 				int getRawBits( void ) const;
 				void setRawBits( int const raw );
 };
+std::ostream& operator<<(std::ostream &o, Fixed const &fixed);
+
 
 # endif
