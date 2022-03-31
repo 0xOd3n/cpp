@@ -6,7 +6,7 @@
 #    By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 16:04:40 by abbelhac          #+#    #+#              #
-#    Updated: 2022/03/23 20:19:30 by abbelhac         ###   ########.fr        #
+#    Updated: 2022/03/31 19:35:37 by abbelhac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,8 @@ all : $(NAME)
 $(NAME) : $(OBJ) $(HEADER)
 	c++ $(FLAGS) $(STD) $(OBJ) -o $(NAME)
 
-%.o : %.c
-	c++ $(FLAGS) $(STD) $< -o $@
+%.o : %.cpp
+	c++ $(FLAGS) $(STD) -c $< -o $@
 
 clean :
 	rm -rf $(OBJ)
