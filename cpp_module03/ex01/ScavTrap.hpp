@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 18:49:10 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/01 19:22:14 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/02 22:43:55 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ class ScavTrap : public ClapTrap
 				ScavTrap(std::string name);
 				ScavTrap(const ScavTrap& copy);
 				~ScavTrap();
-				ScavTrap&	operator=(const ScavTrap& cpy);
+				ScavTrap&	operator=(const ScavTrap& copy);
 				void	guardGate();
+				void	attack(const std::string& target);
 };
 
 # endif

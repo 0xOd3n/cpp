@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:33:52 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/01 17:43:29 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/02 22:24:32 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class ClapTrap
 				void attack(const std::string& target);
 				void takeDamage(unsigned int amount);
 				void beRepaired(unsigned int amount);
+				const std::string& get_name();
 };
 
 #endif

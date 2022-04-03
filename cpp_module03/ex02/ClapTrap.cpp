@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:33:50 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/01 19:36:01 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/03 00:26:23 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,11 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& copy)
 	return (*this);
 }
 
+const std::string&	ClapTrap::get_name()
+{
+	return (this->_name);
+}
+
 void	ClapTrap::attack(const std::string& target)
 {
 	if (this->Hit_point <= 0)
@@ -83,7 +88,6 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << this->Hit_point << std::endl;
 	if (this->Hit_point <= 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " is already dead\n";

@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 19:12:41 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/01 19:41:03 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/02 23:40:29 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 ScavTrap::ScavTrap()
 {
 	std::cout << "ScavTrap Default constructor called\n";
+	this->_name = "";
 	this->Hit_point = 100;
 	this->Energy_point = 50;
 	this->Attack_damage = 20;
@@ -34,15 +35,12 @@ ScavTrap::ScavTrap(const ScavTrap& copy)
 	*this = copy;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap& cpy)
+ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
 {
 	std::cout << "ScavTrap Assignment operator called\n";
-	if (this == &cpy)
+	if (this == &copy)
 		return (*this);
-	this->_name = cpy._name;
-	this->Hit_point = cpy.Hit_point;
-	this->Energy_point = cpy.Energy_point;
-	this->Attack_damage = cpy.Attack_damage;
+	ClapTrap::operator=(copy);
 	return (*this);
 }
 
@@ -54,4 +52,20 @@ ScavTrap::~ScavTrap()
 void	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << this->_name << " have enterred in Gate keeper mode\n";
+}
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (this->Hit_point <= 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " is dead\n";
+		return ;
+	}
+	if (this->Energy_point <= 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " didn't have enough energy point to attack\n";
+		return ;
+	}
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", " << "causing " << this->Attack_damage << " points of damage\n";
+	this->Energy_point--;
 }

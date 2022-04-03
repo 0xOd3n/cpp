@@ -6,22 +6,18 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:33:48 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/01 19:23:36 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/03 00:20:43 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-	ScavTrap p1;
-	ScavTrap p2("player2");
-	ScavTrap p3(p2);
-	p3.attack("player1");
-	p3.takeDamage(8);
-	p3.takeDamage(1);
-	p3.attack("player1");
-	p3.beRepaired(10);
-	p3.takeDamage(10);
-	p1.guardGate();
+	FragTrap p1("player 1");
+	FragTrap p2("player 2");
+	FragTrap p3(p2);
+	p3.attack(p1.get_name());
+	p1.highFivesGuys();
+	p1.attack("pp");
 }
