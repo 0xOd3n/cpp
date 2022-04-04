@@ -23,7 +23,9 @@ class Brain
 				Brain();
 				Brain(const Brain& copy);
 				~Brain();
-				Brain& operator=(const Brain& copy);	
+				Brain& operator=(const Brain& copy);
+				void	set_ideas(std::string idea, int i);
+				const std::string& get_ideas(int i) const;
 };
 
 # endif

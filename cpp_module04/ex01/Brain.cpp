@@ -19,6 +19,7 @@ Brain::Brain()
 
 Brain::Brain(const Brain& copy)
 {
+	std::cout << "Brain copy constructor has been called\n";
 	*this = copy;
 }
 
@@ -27,8 +28,34 @@ Brain::~Brain()
 	std::cout << "Brain Destructor called\n";
 }
 
-Brain&	Brain::operator=(const Brain& copy)
+Brain& Brain::operator= (const Brain& copy)
 {
-	if (this == &copy)
-		return (*this);
+	int		i = 0;
+	
+	std::cout << "Brain Assignation operator has been called!!" << std::endl;
+	if (this != &copy)
+	{
+		while (i < 100)
+		{
+			this->ideas[i] = copy.ideas[i];
+			i++;
+		}
+	}
+	return (*this);
+}
+
+void	Brain::set_ideas(std::string idea, int i)
+{
+	if (i < 100)
+		ideas[i] = idea;
+}
+
+const std::string&	Brain::get_ideas(int i) const
+{
+	return (ideas[i]);
+}
+
+Brain::~Brain()
+{
+	std::cout << "Brain destructor has been called!!" << std::endl;
 }

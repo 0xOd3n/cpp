@@ -15,9 +15,10 @@
 Cat::Cat() : Animal("Cat")
 {
 	std::cout << "Cat default constructor called\n";
+	this->brain = new Brain();
 }
 
-Cat::Cat(const Cat& copy)
+Cat::Cat(const Cat& copy) : Animal(copy)
 {
 	std::cout << "Cat copy constructor called\n";
 	*this = copy;
