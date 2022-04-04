@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 19:13:04 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/03 17:59:17 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/03 22:59:44 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/03 23:03:17 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "Brain.hpp"
 
-#include <iostream>
-
-class Animal 
+Brain::Brain()
 {
-	protected :
-				std::string _type;
+	std::cout << "Brain default constructor called\n";
+}
 
-	public :
-				Animal();
-				Animal(const std::string& type);
-				Animal(const Animal& copy);
-				virtual ~Animal();
-				Animal&	operator=(const Animal& copy);
-				std::string	getType() const;
-				virtual void	makeSound() const;
-};
+Brain::Brain(const Brain& copy)
+{
+	*this = copy;
+}
 
-# endif
+Brain::~Brain()
+{
+	std::cout << "Brain Destructor called\n";
+}
+
+Brain&	Brain::operator=(const Brain& copy)
+{
+	if (this == &copy)
+		return (*this);
+}
