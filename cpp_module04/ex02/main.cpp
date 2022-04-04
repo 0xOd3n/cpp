@@ -27,28 +27,33 @@ int main()
 	// 	copycat.display_ideas(0);
 	// }
 
-	std::cout << "--------------------------------\n";
 	
-	int c = 10;
-	Animal *animal[c];
-	int a = -1;
+	// std::cout << "--------------------------------\n";
+	
+	// int c = 10;
+	// Animal *animal[c];
+	// int a = -1;
 
-	while (++a < c)
-	{
-		if (a % 2)
-			animal[a] = new Cat();
-		else
-			animal[a] = new Dog();
-	}
-	while (a--)
-    {
-        std::cout << a << std::endl;
-		delete animal[a];
-    }	
-	std::cout << "--------------------------------\n";
+	// while (++a < c)
+	// {
+	// 	if (a % 2)
+	// 		animal[a] = new Cat();
+	// 	else
+	// 		animal[a] = new Dog();
+	// }
+	// while (a--)
+    // {
+    //     std::cout << a << std::endl;
+	// 	delete animal[a];
+    // }	
+	// std::cout << "--------------------------------\n";
 	
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
-	// delete j;
-	// delete i;
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+
+	j->makeSound();
+	i->makeSound();
+
+	delete j;
+	delete i;
 }

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 22:59:08 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/03 22:59:19 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/02 19:13:04 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/03 18:18:21 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
-class Brain
+class WrongAnimal
 {
-	private :
-				std::string ideas[100];
+	protected :
+				std::string _type;
+
 	public :
-				Brain();
-				Brain(const Brain& copy);
-				~Brain();
-				Brain& operator=(const Brain& copy);
-				void	set_ideas(std::string idea, int i);
-				const std::string& get_ideas(int i) const;
+				WrongAnimal();
+				WrongAnimal(const std::string& type);
+				WrongAnimal(const WrongAnimal& copy);
+				~WrongAnimal();
+				WrongAnimal&	operator=(const WrongAnimal& copy);
+				std::string	getType() const;
+				void	makeSound() const;
 };
 
 # endif
