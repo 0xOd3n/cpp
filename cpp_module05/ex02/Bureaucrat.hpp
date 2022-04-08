@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 22:20:02 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/07 02:49:18 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/08 02:29:34 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ class Bureaucrat
 				void	increment();
 				void	decrement();
 				void	signForm(Form& form);
+				void	executeForm(Form const& form);
 };
-
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj);
 

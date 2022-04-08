@@ -6,42 +6,38 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 23:24:21 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/07 01:23:38 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/08 02:38:46 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
-
-
 	try
 	{
+		ShrubberyCreationForm	shrubbery("Home");
+		std::cout << "--------- shrubbery -----------\n" << std::endl;
+		shrubbery.Action();
 
-		// Bureaucrat	obj;
-		std::cout << "------------------------------------\n";
-		Form        form("", 5, 6);
-		Bureaucrat	bureaucrat("Director", 5);
-		std::cout << bureaucrat;
-		std::cout << form;
-		form.beSigned(bureaucrat);
-		bureaucrat.signForm(form);
-		std::cout << form;
-		std::cout << "\n---------------------------------\n";
-		bureaucrat.decrement();
-		std::cout << bureaucrat;
-		bureaucrat.increment();
+		std::cout << "\n--------- Roboto -----------\n" << std::endl;
+		RobotomyRequestForm		robot("Roboto-san");
+		robot.Action();
 
-		Form        form1("Competiton1", 5, 6);
-		form1.beSigned(bureaucrat);
-		bureaucrat.signForm(form1);
-		std::cout << form1;
+		std::cout << "\n--------- president -----------\n" << std::endl;
+		PresidentialPardonForm		president("Manager");
+		president.Action();
+
+
+		std::cout << "\n--------- execute -----------\n" << std::endl;
+		Bureaucrat	bureaucrat("Director", 6);
+		bureaucrat.signForm(president);
+		bureaucrat.executeForm(president);
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
 }

@@ -6,7 +6,7 @@
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 01:26:01 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/07 02:44:35 by abbelhac         ###   ########.fr       */
+/*   Updated: 2022/04/08 02:31:44 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ class Form
 					public:
 						const char* what() const throw();
 				};
+				class FormUnsignedException : public std::exception
+				{
+					public:
+						const char* what() const throw();
+				};
 				Form();
 				Form(const std::string& name, const int& sign_grade, const int& exc_grade);
 				Form(const Form& copy);
@@ -46,9 +51,9 @@ class Form
 				int				get_signed_grade() const;
 				int				get_exc_grade() const;
 				void			beSigned(const Bureaucrat& bureaucrat);
+				virtual void	Action() const = 0;
+				void			execute(Bureaucrat const& executor) const;
 };
-
-
 
 std::ostream& operator<<(std::ostream& out, const Form& form);
 
