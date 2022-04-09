@@ -6,7 +6,7 @@
 #    By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 18:19:58 by abbelhac          #+#    #+#              #
-#    Updated: 2022/04/08 02:21:45 by abbelhac         ###   ########.fr        #
+#    Updated: 2022/04/08 22:22:24 by abbelhac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,4 +34,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re:	fclean all%
+re:	fclean all
