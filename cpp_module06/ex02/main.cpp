@@ -5,24 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 02:25:50 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/11 02:17:57 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/11 01:42:01 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/11 02:48:05 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "conversion.hpp"
+#include "Class.hpp"
 
-int main(int ac, char **av)
+int		main()
 {
-   
-    if (ac == 2)
-    {
-        char_converter(av[1]);
-        int_converter(av[1]);
-        float_converter(av[1]);
-        double_converter(av[1]);
-    }
-    else
-        std::cerr << "Error : Inavlid Parameter\n";
-    return (0);
+	Base*	base;
+	// Base*	pbase = new Base();
+	base = generate();
+
+	std::cout << "Identify real type using pointers!!\n";
+	identify(base);
+	std::cout << "Identify real type using reference!!\n";
+	identify(*base);
+	
+	return (0);
 }

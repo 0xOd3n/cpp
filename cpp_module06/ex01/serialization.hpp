@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   serialization.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 02:25:50 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/11 02:17:57 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/10 21:21:28 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/11 01:13:26 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "conversion.hpp"
+#ifndef SERIALIZATION_HPP
+# define SERIALIZATION_HPP
 
-int main(int ac, char **av)
+#include <iostream>
+
+struct	Data
 {
-   
-    if (ac == 2)
-    {
-        char_converter(av[1]);
-        int_converter(av[1]);
-        float_converter(av[1]);
-        double_converter(av[1]);
-    }
-    else
-        std::cerr << "Error : Inavlid Parameter\n";
-    return (0);
-}
+	int 	i;
+	std::string	str;
+};
+
+uintptr_t       serialize(Data* ptr);
+Data*           deserialize(uintptr_t raw);
+
+# endif

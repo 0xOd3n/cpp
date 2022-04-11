@@ -6,17 +6,17 @@
 #    By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 18:19:58 by abbelhac          #+#    #+#              #
-#    Updated: 2022/04/10 17:09:18 by abbelhac         ###   ########.fr        #
+#    Updated: 2022/04/10 21:26:50 by abbelhac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = serialization
 
-SRCS = main.cpp conversion.cpp checker.cpp
+SRCS = main.cpp serialize.cpp deserialize.cpp
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
-HEADER = conversion.hpp
+HEADER = serialization.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

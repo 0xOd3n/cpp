@@ -6,17 +6,17 @@
 #    By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/03 18:19:58 by abbelhac          #+#    #+#              #
-#    Updated: 2022/04/10 17:09:18 by abbelhac         ###   ########.fr        #
+#    Updated: 2022/04/11 02:11:29 by abbelhac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = dynamic_cast
 
-SRCS = main.cpp conversion.cpp checker.cpp
+SRCS = main.cpp identify.cpp generate.cpp
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
-HEADER = conversion.hpp
+HEADER = Class.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

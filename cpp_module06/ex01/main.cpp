@@ -5,24 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 02:25:50 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/11 02:17:57 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/10 17:42:25 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/11 01:16:05 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "conversion.hpp"
+#include "serialization.hpp"
 
-int main(int ac, char **av)
+
+int		main()
 {
-   
-    if (ac == 2)
-    {
-        char_converter(av[1]);
-        int_converter(av[1]);
-        float_converter(av[1]);
-        double_converter(av[1]);
-    }
-    else
-        std::cerr << "Error : Inavlid Parameter\n";
-    return (0);
+	Data	*data = new Data;
+	uintptr_t	ptr;
+
+	data->i = 42;
+	data->str = "1337";
+
+	std::cout << data->i << " | " << data->str << std::endl;
+	ptr = serialize(data);
+	std::cout << ptr << " | " << data << std::endl;
+
+	data = deserialize(ptr);
+	std::cout << data << " | " << data->i << " | " << data->str << std::endl;
+	return (0);
 }

@@ -1,28 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Class.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 02:25:50 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/11 02:17:57 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/11 01:42:39 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/11 01:51:01 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "conversion.hpp"
+#ifndef CLASS_HPP
+# define CLASS_HPP
 
-int main(int ac, char **av)
+#include <iostream>
+#include <string>
+#include <time.h>
+#include <exception>
+
+class Base
 {
-   
-    if (ac == 2)
-    {
-        char_converter(av[1]);
-        int_converter(av[1]);
-        float_converter(av[1]);
-        double_converter(av[1]);
-    }
-    else
-        std::cerr << "Error : Inavlid Parameter\n";
-    return (0);
-}
+    public :
+                virtual ~Base(){};
+};
+
+class A : public Base
+{
+    
+};
+
+class B : public Base
+{
+    
+};
+
+class C : public Base
+{
+
+};
+
+Base*       generate(void);
+void        identify(Base* p);
+void        identify(Base& p);
+
+#endif

@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   deserialize.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abbelhac <abbelhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 02:25:50 by abbelhac          #+#    #+#             */
-/*   Updated: 2022/04/11 02:17:57 by abbelhac         ###   ########.fr       */
+/*   Created: 2022/04/10 21:24:53 by abbelhac          #+#    #+#             */
+/*   Updated: 2022/04/10 22:07:56 by abbelhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "conversion.hpp"
+#include "serialization.hpp"
 
-int main(int ac, char **av)
+Data*		deserialize(uintptr_t raw)
 {
-   
-    if (ac == 2)
-    {
-        char_converter(av[1]);
-        int_converter(av[1]);
-        float_converter(av[1]);
-        double_converter(av[1]);
-    }
-    else
-        std::cerr << "Error : Inavlid Parameter\n";
-    return (0);
+	Data	*data_ptr;
+
+	data_ptr = reinterpret_cast<Data*>(raw);
+	return (data_ptr);
 }
