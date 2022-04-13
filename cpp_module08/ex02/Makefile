@@ -10,12 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Span
+NAME = MutantStack
 
-SRCS = main.cpp Span.cpp
+SRCS = main.cpp 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
-HEADER = Span.hpp
+HEADER = MutantStack.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
